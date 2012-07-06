@@ -1,0 +1,53 @@
+ncverilog: 08.20-p001: (c) Copyright 1995-2008 Cadence Design Systems, Inc.
+TOOL:	ncverilog	08.20-p001: Started on Jul 07, 2012 at 02:09:29 KST
+ncverilog
+	-f AES.f
+		./SUBBYTE.v
+		./SBOX_ROM.v
+		./ENC_BYTE_MIXCOL.v
+		./ENC_WORD_MIXCOL.v
+		./MIXCOL.v
+		./XTIME.v
+		./KEY_SCHEDULE.v
+		./ROUNDADD.v
+		./CONTROL_UNIT.v
+	+define+_STD150E_+functional_mode+
+	+access+rw
+file: ./SUBBYTE.v
+file: ./SBOX_ROM.v
+file: ./ENC_BYTE_MIXCOL.v
+file: ./ENC_WORD_MIXCOL.v
+file: ./MIXCOL.v
+file: ./XTIME.v
+file: ./KEY_SCHEDULE.v
+file: ./ROUNDADD.v
+	module worklib.ROUNDADD:v
+		errors: 0, warnings: 0
+file: ./CONTROL_UNIT.v
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.CONTROL_UNIT:v <0x5d249e11>
+			streams:   2, words:  2145
+		worklib.ROUNDADD:v <0x78856fff>
+			streams:   2, words:  2109
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:             20       9
+		Registers:           53      51
+		Scalar wires:        73       -
+		Expanded wires:      32       4
+		Vectored wires:      31       -
+		Always blocks:       15      13
+		Cont. assignments:   13      11
+		Pseudo assignments:   7       7
+	Writing initial simulation snapshot: worklib.SUBBYTE:v
+Loading snapshot worklib.SUBBYTE:v .................... Done
+ncsim> source /tools/cadence/ius/tools/inca/files/ncsimrc
+ncsim> run
+ncsim: *W,RNQUIE: Simulation is complete.
+ncsim> exit
+TOOL:	ncverilog	08.20-p001: Exiting on Jul 07, 2012 at 02:09:30 KST  (total: 00:00:01)
