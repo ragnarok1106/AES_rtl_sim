@@ -6,14 +6,16 @@ module CONTROL_UNIT (
 	//COMPLETE SIGNAL FROM EACH ROUND TRANSFORMATION UNIT
 	input wire			ss_ready_in,
 	input wire			mc_ready_in,
+	input wire			ks_ready_in,
 	input wire			ark_ready_in,
 
 //OUTPUT
 	//START SIGNAL TO EACH ROUND TRANSFORAMTION UNIT
-	output reg			round_out,
+	output reg	[3:0]	round_out,
 	output reg			ss_start_out,
 	output reg			mc_start_out,
 	output reg			ark_start_out,
+	output reg			ks_start_out,
 
 	//MUX SIGNALS
 	output reg			key_sel,
@@ -44,7 +46,8 @@ always @( state or round_out or load_in or ss_ready_in or mc_ready_in or ark_rea
 
 	ss_start_out = ark_ready_in;
 	mc_start_out = ss_ready_in;
-	ark_start_out = mc_ready_in;
+	ks_start_out = ss_ready_in;
+	ark_start_out = mc_ready_in && ks_ready_in;
 	
 	case (state)
 		0: begin

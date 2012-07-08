@@ -9,15 +9,15 @@ module SUBBYTE(
 //output
 	output reg [7:0]	sbox_data_out,
 	output reg [127:0]  data_out,
-	output reg			ready_out
+	output reg			ready_out,
+	output reg			ce,
+	output reg			re
 );
 
 //internal registers
 
 reg [127:0]	data_reg;
 reg [127:0]	next_data_reg;
-reg 	 	ce;
-reg		 	re;
 reg [5:0]	state;
 reg [5:0]	next_state;
 reg 		next_ready_out;
@@ -25,14 +25,6 @@ reg 		next_ready_out;
 reg [7:0] 	data_state[15:0];
 reg [7:0]	data_state_t[15:0];
 reg [127:0] part_sub_data;
-
-SBOX_ROM sbrom(
-.clk 		(clk),
-.addr 		(sbox_data_out),
-.chip_en 	(ce),
-.read_en 	(re),
-.data 		(sbox_data_in)
-);
 
 `define state_to_128bit\
 	part_sub_data[127:120] = data_state_t[0];\

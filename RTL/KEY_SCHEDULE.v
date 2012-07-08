@@ -10,7 +10,9 @@ module KEY_SCHEDULE (
 //output
 	output reg	[127:0]	new_key_out,
 	output reg			ready_out,
-	output reg  [7:0]	sbox_data_out
+	output reg  [7:0]	sbox_data_out,
+	output reg			ce,
+	output reg			re
 );
 
 reg	[7:0]	rcon;
@@ -19,17 +21,6 @@ reg [31:0]	col, next_col;
 reg [127:0]	next_data_out;
 reg 		next_ready_out;
 reg [127:0] key_var, new_key_var;
-reg			ce;
-reg			re;
-
-
-SBOX_ROM sbrom_key(
-.clk		(clk),
-.addr		(sbox_data_out),
-.chip_en	(ce),
-.read_en	(re),
-.data		(sbox_data_in)
-);
 
 
 //RCON

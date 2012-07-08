@@ -11,3 +11,6 @@
 /home/member/jwchang/GITrepository/AES_rtl_sim/RTL/KEY_SCHEDULE.v
 /home/member/jwchang/GITrepository/AES_rtl_sim/RTL/ROUNDADD.v
 /home/member/jwchang/GITrepository/AES_rtl_sim/RTL/CONTROL_UNIT.v
+/home/member/jwchang/GITrepository/AES_rtl_sim/RTL/AES_TOP.v
+/home/member/jwchang/GITrepository/AES_rtl_sim/RTL/MUX.v
+/home/member/jwchang/GITrepository/AES_rtl_sim/RTL/AES_TB.v

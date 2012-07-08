@@ -7,3 +7,6 @@
 ./KEY_SCHEDULE.v
 ./ROUNDADD.v
 ./CONTROL_UNIT.v
+./AES_TOP.v
+./MUX.v
+./AES_TB.v

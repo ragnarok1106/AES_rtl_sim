@@ -7,7 +7,7 @@ module ROUNDADD(
 	input wire	[127:0] ksch_key_in,
 	//CONTROL SIGNALS INPUT
 	input wire			start_in,
-	input wire			round_in,
+	input wire	[3:0]	round_in,
 
 //output
 	output reg	[127:0]	data_out,
