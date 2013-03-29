@@ -1,8 +1,0 @@
-//
-// File created by:  ncverilog
-// Do not modify this file
-//
--DEFINE
-_STD150E_
--DEFINE
-functional_mode

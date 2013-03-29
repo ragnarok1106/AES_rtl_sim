@@ -1,8 +1,0 @@
-//
-// File created by:  ncverilog
-// Do not modify this file
-//
--f
-AES.f
-+define+_STD150E_+functional_mode+
-+access+rw
