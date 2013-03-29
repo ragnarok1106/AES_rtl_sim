@@ -1,0 +1,62 @@
+ncverilog: 08.20-p001: (c) Copyright 1995-2008 Cadence Design Systems, Inc.
+TOOL:	ncverilog	08.20-p001: Started on Aug 10, 2012 at 23:31:22 KST
+ncverilog
+	-f AES.f
+		../rtl/timescale.v
+		../rtl/sbox_rom.v
+		../rtl/subbyte.v
+		../rtl/xtime.v
+		../rtl/bytemixcol.v
+		../rtl/wordmixcol.v
+		../rtl/columnmix.v
+		../rtl/keyexp.v
+		../rtl/top_subbyte.v
+		../rtl/top_keyexp.v
+		../rtl/addroundkey.v
+		../rtl/transform_aes.v
+		./module_tst/keyexp/tb_keyexp.v
+	+define+_STD150E_+functional_mode+
+	+access+rw
+file: ../rtl/timescale.v
+file: ../rtl/sbox_rom.v
+file: ../rtl/subbyte.v
+file: ../rtl/xtime.v
+file: ../rtl/bytemixcol.v
+file: ../rtl/wordmixcol.v
+file: ../rtl/columnmix.v
+file: ../rtl/keyexp.v
+file: ../rtl/top_subbyte.v
+file: ../rtl/top_keyexp.v
+file: ../rtl/addroundkey.v
+file: ../rtl/transform_aes.v
+	module worklib.transform_aes:v
+		errors: 0, warnings: 0
+file: ./module_tst/keyexp/tb_keyexp.v
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.columnmix:v <0x1863aa60>
+			streams:   7, words:  4367
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 31      12
+		Registers:               41      39
+		Scalar wires:            99       -
+		Vectored wires:          77       -
+		Always blocks:           11       9
+		Initial blocks:           3       3
+		Cont. assignments:       61      22
+		Pseudo assignments:       6       6
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.transform_aes:v
+Loading snapshot worklib.transform_aes:v .................... Done
+ncsim> source /tools/cadence/ius/tools/inca/files/ncsimrc
+ncsim> run
+Dump variables..
+Simulation complete via $finish(1) at time 1045 NS + 0
+./module_tst/keyexp/tb_keyexp.v:42 	# 1000	$finish;
+ncsim> exit
+TOOL:	ncverilog	08.20-p001: Exiting on Aug 10, 2012 at 23:31:23 KST  (total: 00:00:01)

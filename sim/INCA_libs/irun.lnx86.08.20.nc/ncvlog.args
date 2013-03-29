@@ -1,0 +1,31 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx86.08.20.nc
+-RUNMODE
+../rtl/timescale.v
+../rtl/sbox_rom.v
+../rtl/subbyte.v
+../rtl/xtime.v
+../rtl/bytemixcol.v
+../rtl/wordmixcol.v
+../rtl/columnmix.v
+../rtl/keyexp.v
+../rtl/top_subbyte.v
+../rtl/top_keyexp.v
+../rtl/addroundkey.v
+../rtl/transform_aes.v
+./module_tst/keyexp/tb_keyexp.v
+-DEFINE
+_STD150E_
+-DEFINE
+functional_mode
+-CDSLIB
+./INCA_libs/irun.lnx86.08.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx86.08.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
+-ALLOWUNBOUND

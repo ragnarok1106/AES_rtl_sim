@@ -1,0 +1,21 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
++define+_STD150E_+functional_mode+
++access+rw
+-MESSAGES
+-XLSTIME
+1344609082
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx86.08.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx86.08.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx86.08.20.nc/hdl.var
+-XLNAME
+ncverilog
+-XLVERSION
+"TOOL:	ncverilog	08.20-p001"
